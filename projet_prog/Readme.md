@@ -1,9 +1,3 @@
-Pour être tout à fait complet, il manque deux précisions importantes sur la structure de ton code : la **gestion des erreurs de ressources** et l'**architecture de la boucle de jeu**. 
-
-Voici une version finale enrichie, incluant la partie technique "sous le capot" que tu as écrite :
-
----
-
 # Documentation Technique : Forêt In Silico
 
 Ce document détaille le fonctionnement de la simulation écosystémique multi-agents modélisant les interactions entre proies, prédateurs et ressources.
