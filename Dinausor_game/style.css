@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box; /* Pour que les bordures n'augmentent pas la taille */
+}
+
+body {
+    /* NOUVEAU : Centrage parfait de tout le contenu au milieu de l'écran */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    height: 100vh;           /* Prends toute la hauteur de l'écran */
+    margin: 0;
+    
+    background-color: #e4bfd7;
+    font-family: sans-serif;
+}
+        
+/* Zone de jeu */
+canvas {
+    background-color: #ffffff;
+    
+    /* MODIFIÉ : Le contour rose de l'ancien projet */
+    border: 10px solid #ff86d9; 
+    border-radius: 10px;
+    display: block; /* Évite de petits espaces en bas */
+}
+
+/* --- Style commun aux "boîtes" centrées (Menu et Canvas) --- */
+.centered-box {
+    background-color: #ffffff;
+    border: 10px solid #ff86d9;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Style spécifique à l'écran d'accueil --- */
+#startScreen {
+    /* On applique les mêmes bordures que le Canvas */
+    background-color: #ffffff;
+    border: 10px solid #ff86d9;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+    min-width: 400px; /* Taille minimum pour le menu */
+}
+
+#startScreen h1 {
+    color: #d85ab2;
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.input-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 3px solid #ff86d9;
+    border-radius: 8px;
+    outline: none;
+}
+input[type="text"]:focus {
+    border-color: #d85ab2;
+}
+
+.score-info {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+#highScoreDisplay {
+    font-weight: bold;
+    color: #d85ab2;
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #ff86d9;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    width: 100%; /* Le bouton prend toute la largeur du menu */
+}
+
+button:hover {
+    background-color: #d85ab2;
+}
+
+button:active {
+    transform: scale(0.97); /* Petit effet de clic */
+}
+
+/* Classe utilitaire très importante pour cacher des éléments */
+.hidden {
+    display: none !important;
+}
+
+/* --- NOUVEAU : Style du classement --- */
+.leaderboard {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    background: #fdf0f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px dashed #ff86d9;
+}
+
+.leaderboard h3 {
+    margin-top: 0;
+    color: #d85ab2;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#leaderboardList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboardList li {
+    padding: 8px 5px;
+    border-bottom: 1px solid #ffbced;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    justify-content: space-between; /* Aligne le nom à gauche et le score à droite */
+}
+
+#leaderboardList li:last-child {
+    border-bottom: none;
+}
+
+/* --- NOUVEAU : Conteneur global du jeu --- */
+#gameArea {
+    display: flex;
+    flex-direction: column; /* Place l'UI au-dessus du Canvas */
+    align-items: center;
+    gap: 15px; /* Espace entre la barre de score et le jeu */
+}
+
+/* --- NOUVEAU : Barre de score (UI) --- */
+#gameUI {
+    width: 800px; /* Même largeur que le canvas */
+    display: flex;
+    justify-content: space-between; /* Nom à gauche, Score à droite */
+    background-color: #ffffff;
+    border: 5px solid #ff86d9;
+    border-radius: 10px;
+    padding: 10px 25px;
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d85ab2;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
