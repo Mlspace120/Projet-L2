@@ -82,11 +82,11 @@ API_KEY = "YOUR_LASTFM_API_KEY"
 
 ## Usage
 
-### Step 1 — Fetch tracks
+### Step 1 — Récupérations 
 
 Le script récupère les sons populaires et les affiche.
 
-### Step 2 — Select tracks
+### Step 2 — Selections
 
 Entrer les numéros :
 
@@ -106,9 +106,9 @@ Le script fait tout :
 
 ---
 
-## How it works
+## Comment ça marche 
 
-### Audio analysis
+### Analyse d'audio
 
 * RMS (énergie du signal)
 * détection des beats (librosa)
@@ -126,7 +126,7 @@ Le script fait tout :
 
 ---
 
-## Requirements
+## Requis
 
 * dossier `backgrounds/` avec images
 * connexion internet
@@ -143,7 +143,7 @@ Le script fait tout :
 
 ---
 
-## Possible improvements
+## Possibles améliorations
 
 * sous-titres automatiques
 * génération de captions
